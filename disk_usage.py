@@ -11,7 +11,7 @@ def check_disk_usage(disk, min_gb, min_percent):
         return False
     return True
 
-if not check_disk_usage("/", 2, 10):
+if not check_disk_usage("/", 10, 2):
     print("ERROR : Not enough disk space.!")
     sys.exit(1)
 
