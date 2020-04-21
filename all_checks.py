@@ -2,6 +2,11 @@
 
 import shutil
 import sys
+import os
+
+def check_reboot():
+    '''Returns True, if the computer has a pending reboot.'''
+    return os.path.exists("/run/reboot-required")
 
 def check_disk_usage(disk, min_gb, min_percent):
     du = shutil.disk_usage(disk)
